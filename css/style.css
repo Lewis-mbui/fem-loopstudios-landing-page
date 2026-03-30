@@ -98,8 +98,8 @@ svg {
 
 body {
   font-family: var(--ff-primary);
-  padding: 1rem 3rem;
   color: var(--clr-grey);
+  /* padding: 1rem 3rem; */
   /* background-color: var(--clr-black); */
 }
 
@@ -163,4 +163,10 @@ h2 {
 .btn:hover, .btn:focus-visible {
   background-color: var(--clr-black);
   color: var(--clr-white);
+}
+
+/* UTILITY CLASSES */
+.wrapper {
+  width: min(calc(100% - 2rem), 68.75rem); /*1100px*/
+  margin: 0 auto;
 }
