@@ -98,8 +98,9 @@ svg {
 
 body {
   font-family: var(--ff-primary);
-  padding: 0 3rem;
+  padding: 1rem 3rem;
   color: var(--clr-grey);
+  /* background-color: var(--clr-black); */
 }
 
 h1, h2, h3 {
@@ -115,7 +116,51 @@ h1 {
 
 h2 {
   font-size: 1.975rem;
-  text-align: center;
 }
 
-p {text-align: center}
+/* LINKS */
+.link {
+  color: var(--clr-white);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link:hover {
+  position: relative;
+}
+
+.link:hover::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  border-radius: 1px;
+  width: 40%;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  background-color: var(--clr-white);
+}
+
+.link--full-underline:hover::after {
+  width: 100%;
+}
+
+/* BUTTONS */
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: .2em 1.5em;
+  outline: 0;
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-black);
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.btn:hover, .btn:focus-visible {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
