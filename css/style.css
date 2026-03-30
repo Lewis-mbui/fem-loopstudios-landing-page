@@ -17,6 +17,16 @@
   src: url('/assets/fonts/josefin-sans-v34-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* CUSTOM PROPERTIES */
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-grey: hsl(0, 0%, 85%);
+
+  --ff-primary: 'Alata';
+  --ff-secondary: 'Josefin Sans';
+}
+
 /* RESET STYLES */
 /* Box sizing rules */
 *,
@@ -87,5 +97,5 @@ svg {
 }
 
 body {
-  font-family: 'Josefin Sans';
+  font-family: var(--ff-primary);
 }
