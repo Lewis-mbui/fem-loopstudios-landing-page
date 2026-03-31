@@ -21,7 +21,7 @@
 :root {
   --clr-white: hsl(0, 0%, 100%);
   --clr-black: hsl(0, 0%, 0%);
-  --clr-grey: hsl(0, 0%, 85%);
+  --clr-grey: hsl(0, 0%, 68%);
 
   --ff-primary: 'Alata';
   --ff-secondary: 'Josefin Sans';
@@ -117,6 +117,12 @@ h1 {
 
 h2 {
   font-size: 1.975rem;
+}
+
+@media (min-width: 50em) {
+  h2 {
+    font-size: 2.4rem;
+  }
 }
 
 /* LINKS */
@@ -281,8 +287,52 @@ h2 {
   } 
 }
 
+/* SHOWCASE SECTION */
+.showcase {
+  padding: 7.2rem 0;
+  text-align: center;
+}
+
+.showcase__wrapper {
+  display: grid;
+  gap: 2rem;
+}
+
+.showcase__image img {
+  margin: 0 auto;
+}
+
+.showcase__content {
+  background-color: var(--clr-white);
+}
+
+@media (min-width: 60em) {
+  .showcase__wrapper {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 6rem auto;
+    align-items: end;
+    gap: revert;
+  }
+
+  .showcase__image {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 2;
+  }
+
+  .showcase__content {
+    grid-column: 5 / -1;
+    grid-row: 2 / -1;
+    padding: 5rem 0 0 5rem;
+    text-align: left;
+  }
+}
+
 /* UTILITY CLASSES */
 .wrapper {
   width: min(calc(100% - 3rem), 68.75rem); /*1100px*/
   margin: 0 auto;
+}
+
+.flow > * + * {
+  margin-top: 1rem;
 }

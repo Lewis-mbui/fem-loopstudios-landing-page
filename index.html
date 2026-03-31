@@ -32,13 +32,17 @@
 
       <section class="showcase">
         <div class="wrapper showcase__wrapper">
-          <picture>
+          <picture class="showcase__image">
+            <source
+              media="(width < 60em)"
+              srcset="/assets/images/mobile/image-interactive.jpg"
+            />
             <img
               src="/assets/images/desktop/image-interactive.jpg"
               alt="A man wearing a VR device"
             />
           </picture>
-          <div class="showcase__content">
+          <div class="showcase__content flow">
             <h2>The leader in interactive vr</h2>
             <p>
               Founded in 2011, Loopstudios has been producing world-class
