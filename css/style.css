@@ -334,7 +334,6 @@ h3 {
 
 /* CREATIONS SECTION */
 .creations {
-  outline: 2px solid red;
   text-align: center;
 }
 
@@ -434,6 +433,64 @@ h3 {
 /* FOOTER SECTION */
 .footer {
   margin-top: 5rem;
+  background-color: var(--clr-black);
+  padding: 4rem 0;
+}
+
+.footer__wrapper {
+  display: grid;
+  justify-items: center;
+
+}
+
+.footer__wrapper > :where(:not(:first-child, :last-child)) {
+  margin-top: 2rem;
+}
+
+.links--footer {
+  /* gap: 2rem; */
+  display: grid;
+  gap: 1rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__copyright {
+  margin-top: .6rem;
+}
+
+@media (min-width: 45em) {
+  .footer__wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer__wrapper > * {
+    margin-top: 0;
+  }
+
+  .footer-logo {
+    justify-self: start;
+  }
+
+  .links--footer {
+    display: flex;
+    justify-self: start;
+    gap: 1rem;
+    gap: clamp(1rem, -0.894736842105263rem + 4.2105263157894735vw, 2rem);
+  }
+
+  .social-links {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    justify-self: end;
+  }
+
+  .footer__copyright {justify-self: end;}
 }
 
 /* UTILITY CLASSES */
