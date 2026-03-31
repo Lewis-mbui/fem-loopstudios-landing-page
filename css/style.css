@@ -403,9 +403,9 @@ h3 {
   justify-self: center;
 }
 
-@media (min-width: 25em) {
+@media (min-width: 37.5em) {
   .creations-list {
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 
   .creation img {
@@ -427,6 +427,12 @@ h3 {
 
   .creations-list {
     grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 65em) {
+  .creations-list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
