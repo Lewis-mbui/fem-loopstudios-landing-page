@@ -165,6 +165,79 @@ h2 {
   color: var(--clr-white);
 }
 
+/* HEADER SECTION */
+.header {
+  padding: 3rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.nav-toggler {
+  display: none;
+
+  width: 2rem;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  background-image: url(/assets/images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  gap: 0.8rem;
+  gap: clamp(0.8rem, -0.19999999999999996rem + 3.2vw, 2rem);
+}
+
+@media (max-width: 37.5em) {
+  body.no-scroll {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__nav.expanded {
+    display: revert;
+
+    background-color: var(--clr-black);
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .links--header {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 10rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: var(--ff-secondary);
+    padding: 1rem; 
+  }
+
+  .nav-toggler {
+    display: revert;
+  }
+
+  .nav-toggler.show-close {
+    background-image: url(/assets/images/icon-close.svg);
+    width: 1.5rem;
+  }
+}
+
 /* UTILITY CLASSES */
 .wrapper {
   width: min(calc(100% - 2rem), 68.75rem); /*1100px*/

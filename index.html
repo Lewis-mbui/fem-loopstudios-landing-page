@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Loopstudios Landing Page</title>
   </head>
-  <body>
+  <body class="no-scrol">
     <header class="header" style="background-color: black">
       <div class="wrapper header__wrapper">
         <a href="/"><img src="/assets/images/logo.svg" alt="Loopstudios" /></a>
-        <button class="nav-toggler">toggle</button>
-        <nav class="header__nav">
-          <ul class="links" role="list">
+        <button class="nav-toggler show-clos"></button>
+        <nav class="header__nav expande">
+          <ul class="links links--header" role="list">
             <li><a href="#" class="link">About</a></li>
             <li><a href="#" class="link">Careers</a></li>
             <li><a href="#" class="link">Events</a></li>
@@ -135,7 +135,7 @@
     <footer class="footer" style="background-color: black">
       <div class="wrapper footer__wrapper">
         <a href="/"><img src="/assets/images/logo.svg" alt="Loopstudios" /></a>
-        <ul class="footer-links" role="list">
+        <ul class="links links--footer" role="list">
           <li><a href="#" class="link">About</a></li>
           <li><a href="#" class="link">Careers</a></li>
           <li><a href="#" class="link">Events</a></li>
@@ -166,5 +166,7 @@
         </ul>
       </div>
     </footer>
+
+    <script src="/main.js"></script>
   </body>
 </html>
