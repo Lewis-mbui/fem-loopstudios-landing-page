@@ -119,6 +119,10 @@ h2 {
   font-size: 1.975rem;
 }
 
+h3 {
+  font-size: 1.4rem;
+}
+
 @media (min-width: 50em) {
   h2 {
     font-size: 2.4rem;
@@ -157,7 +161,7 @@ h2 {
 .btn {
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding: .2em 1.5em;
+  padding: .2em 2em;
   outline: 0;
   background-color: var(--clr-white);
   border: 1px solid var(--clr-black);
@@ -289,8 +293,9 @@ h2 {
 
 /* SHOWCASE SECTION */
 .showcase {
-  padding: 7.2rem 0;
+  padding: 4rem 0 5rem;
   text-align: center;
+  /* outline: 2px solid red; */
 }
 
 .showcase__wrapper {
@@ -325,6 +330,110 @@ h2 {
     padding: 5rem 0 0 5rem;
     text-align: left;
   }
+}
+
+/* CREATIONS SECTION */
+.creations {
+  outline: 2px solid red;
+  text-align: center;
+}
+
+.creations__wrapper {
+  display: grid;
+  gap: 2rem;
+}
+
+.creations__title {
+  align-self: center;
+}
+
+.creations-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.creation {
+  display: grid;
+  /* border: 1px solid black; */
+  position: relative;
+  cursor: pointer;
+}
+
+.creation::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.creation img {
+  width: 100%;
+  aspect-ratio: 1 / 0.36;
+  object-fit: cover;
+  object-position: center;
+}
+
+.creation__image,
+.creation__title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.creation__title {
+  color: var(--clr-white);
+  z-index: 1;
+  text-align: left;
+  align-self: end;
+  max-width: 10ch;
+  margin: 0 0 1rem 1rem;
+}
+
+.creation:hover img {
+  opacity: .35;
+}
+
+.creation:hover .creation__title {
+  color: var(--clr-black);
+}
+
+.creation:hover::before {
+  display: none;
+}
+
+.creations__btn {
+  justify-self: center;
+}
+
+@media (min-width: 25em) {
+  .creations-list {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .creation img {
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 38.75em) {
+  .creations__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .creations__btn {
+    grid-row: 1/2;
+    grid-column: 2 / -1;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .creations-list {
+    grid-column: 1 / -1;
+  }
+}
+
+/* FOOTER SECTION */
+.footer {
+  margin-top: 5rem;
 }
 
 /* UTILITY CLASSES */
